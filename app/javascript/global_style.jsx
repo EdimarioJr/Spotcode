@@ -6,20 +6,21 @@ export const GlobalStyle = createGlobalStyle`
     ${RobotoFont}
     html,
     body {
-        min-height: 100%;
+        height: 100vh;
         background-color: #1b1b1b;
         font-family: 'Roboto';
     }
 
-    body {
-        display: flex;
-        flex-direction: column;
-    }
 
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }
+    
+    a{
+        text-decoration:none;
+        cursor: pointer;
     }
 `;
 
@@ -29,6 +30,14 @@ export const FlexRowCenter = styled.div`
     justify-content: center;
     align-items: center;
 `;
+
+export const FlexColumnCenter = styled.div`
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
 
 export const Button = styled.button`
     display: flex;
@@ -41,7 +50,7 @@ export const Button = styled.button`
     border-radius: 3px;
     height: 30px;
     font-size: 20px;
-    padding:${props=> props.size? "20px 30px":"15px 15px"};
+    padding:${props=> props.size? "25px 30px":"20px 15px"};
     border: ${props=>props.primary? "2px solid #1dd960":"2px solid white"};
 
     &:hover{
@@ -56,3 +65,4 @@ export const Container = styled.div`
     width: 80%;
     margin: 0 auto;
 `
+
