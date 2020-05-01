@@ -1,24 +1,12 @@
-# README
+# Spotcode
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+PWA feito nas aulas do OneBitCode. Foi baseado na interface do Spotify, tem o front-end feito em React e o back-end feito em Ruby on Rails.Desenvolvido com propósitos de prática e estudo, somente.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - Ruby on rails
+ - Jbuilder
+ - Deviser
+ - sqlite3
+ 
+ - React
+ - React Router
+ - Styled Components
