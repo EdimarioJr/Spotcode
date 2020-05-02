@@ -4,9 +4,7 @@ import {FlexColumnCenter,Button} from '../../global_style'
 
 const Title =  styled.div`
     color: white;
-    font-size: 30px;
-    margin-top: 50px;
-    
+    font-size: 2em;
     #primary{
         color: #1dd960;
         text-align: center;
@@ -16,7 +14,7 @@ const Title =  styled.div`
 const List = styled.ul`
     color: white;
     margin-top: 50px;
-    font-size: 20px;
+    font-size: 1.5em;
     list-style-type: square;
     margin-bottom: 50px;
     li{
@@ -29,6 +27,7 @@ const List = styled.ul`
 
 export default function HomeScreen(){
     return (
+    <>
     <FlexColumnCenter>
         <Title>
             <h1>SEU APP DE</h1>
@@ -44,5 +43,6 @@ export default function HomeScreen(){
             <Button size>CADASTRAR AGORA</Button>
         </a>
     </FlexColumnCenter>
+    </>
     );
 }

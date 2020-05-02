@@ -47,7 +47,7 @@ export default function Dropdown(props) {
           setAction(!action);
         }}
       >
-        {props.botao ? props.botao : <FaAlignJustify size="2em" />}
+        {props.botao ? props.botao : <FaAlignJustify size="2em" color="white" />}
       </div>
       <CSSTransition in={action} timeout={200} classNames="drop" unmountOnExit>
         <DropdownBar>

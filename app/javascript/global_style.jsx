@@ -5,8 +5,9 @@ import styled from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
     ${RobotoFont}
     html,
-    body {
+    body{
         height: 100vh;
+        min-height: 100vh;
         background-color: #1b1b1b;
         font-family: 'Roboto';
     }
@@ -36,6 +37,7 @@ export const FlexColumnCenter = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: calc(81vh - 60px);
 `;
 
 
@@ -64,5 +66,12 @@ export const Button = styled.button`
 export const Container = styled.div`
     width: 80%;
     margin: 0 auto;
+    min-height: calc(81vh - 60px);
 `
 
+export const GridAuto = styled.div`
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 20px;
+    width: 100%;
+`
