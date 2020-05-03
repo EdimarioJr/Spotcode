@@ -37,7 +37,7 @@ export const FlexColumnCenter = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(81vh - 60px);
+    min-height: calc(81vh - 80px);
 `;
 
 
@@ -52,8 +52,8 @@ export const Button = styled.button`
     border-radius: 3px;
     height: 30px;
     font-size: 20px;
-    padding:${props=> props.size? "25px 30px":"20px 15px"};
-    border: ${props=>props.primary? "2px solid #1dd960":"2px solid white"};
+    padding:${props=> props.size == 1? "25px 30px":"20px 15px"};
+    border: ${props=>props.primary == 1? "2px solid #1dd960":"2px solid white"};
 
     &:hover{
         background-color: ${props=>props.primary? "#1dd960":"white" };
@@ -66,12 +66,12 @@ export const Button = styled.button`
 export const Container = styled.div`
     width: 80%;
     margin: 0 auto;
-    min-height: calc(81vh - 60px);
+    min-height: calc(81vh - 80px);
 `
 
 export const GridAuto = styled.div`
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(3,1fr);
     grid-gap: 20px;
     width: 100%;
 `

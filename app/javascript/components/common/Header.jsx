@@ -25,7 +25,7 @@ const Header= styled(FlexRowCenter)`
 
 export default function HeaderComponent(){
     let action_button = useLocation().pathname == '/' ?
-    action_button = <a href="users/sign_in"> <Button size primary>ENTRAR</Button></a> 
+    action_button = <a href="users/sign_in"> <Button size={1} primary={1}>ENTRAR</Button></a> 
     :
     action_button = <Dropdown/>
 

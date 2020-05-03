@@ -40,7 +40,7 @@ export default function HomeScreen(){
             <li>As novas <span>descobertas</span></li>
         </List>
         <a href="users/sign_up">
-            <Button size>CADASTRAR AGORA</Button>
+            <Button size={1}>CADASTRAR AGORA</Button>
         </a>
     </FlexColumnCenter>
     </>

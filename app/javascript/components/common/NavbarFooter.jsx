@@ -10,7 +10,7 @@ const Navbar = styled.div`
   align-items: center;
   border-top: 1px solid white;
   height: 60px;
-  margin-top: auto;
+  margin-top: 20px;
 `;
 
 export default function NavbarFooter() {
