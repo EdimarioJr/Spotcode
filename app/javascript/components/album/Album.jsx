@@ -8,6 +8,7 @@ const AlbumStyle = styled.div`
     flex-direction: column;
     justify-content: space-between;
     color: white;
+    text-align: ${props=> props.primary?"left":"center"};
 
     h3{
         font-weight:bolder;
@@ -19,8 +20,8 @@ const AlbumStyle = styled.div`
     }
 
     #album-cover{
-        width: 380px;
-        height: 380px;
+        width: ${props=>props.primary?"380px":"320px"};
+        height: ${props=>props.primary?"380px":"320px"};
         background-image: url(${props => props.cover});
         background-size: cover;
     }
@@ -29,11 +30,11 @@ const AlbumStyle = styled.div`
 export default function Album(props){
     return(
         <>
-            <Link to={`album/${props.id}`}>
-                <AlbumStyle cover={props.album_cover}>
+            <Link to={`albums/${props.album.id}`}>
+                <AlbumStyle cover={props.album.cover_url} primary={props.primary}>
                     <div id="album-cover"></div>
-                    <h3>{props.title}</h3>
-                    <h4>{props.artist}</h4>
+                    <h3>{props.album.title}</h3>
+                    <h4>{props.album.artist_name}</h4>
                 </AlbumStyle>
             </Link>
         </>

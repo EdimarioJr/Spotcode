@@ -13,48 +13,44 @@ const Title = styled.h1`
     margin-botom: 10px;
 `
 
-
-
-
 export default function DiscoveryScreen(){
     const [recent, setRecent] = useState([])
     const [recommended, setRecommended] = useState([])
 
-    async function fetchAlbum(){
+    async function fetchAlbums(){
         const response = await AlbumService.index()
         setRecent(response.data.recent_albums)
         setRecommended(response.data.recommended_albums)
-        console.log(response.data)
     }
 
     useEffect(()=>{
-        fetchAlbum();
+        fetchAlbums();
     },[])
 
     const recent_albums = recent.map(function(album,key){
         return(
-            <Album id={album.id} key={key} album_cover={album.cover_url} title={album.title} artist={album.artist_name}/> 
+            <Album  key={key} album={album} primary={true}/> 
         );
     })
 
     const recommended_albums = recommended.map(function(album,key){
         return(
-            <Album id={album.id} key={key} album_cover={album.cover_url} title={album.title} artist={album.artist_name}/> 
+            <Album key={key} album={album} primary={true}/> 
         );
     })
 
    
     return <>
         <Container>
-        <Title>Recent Albums</Title>
-        <GridAuto>
-            {recent_albums}
-        </GridAuto>
-        <Title>Recommended Albums</Title>
-        <GridAuto>
-            {recommended_albums}
-        </GridAuto>
-        </Container>
+            <Title>Recent Albums</Title>
+            <GridAuto>
+                {recent_albums}
+            </GridAuto>
+            <Title>Recommended Albums</Title>
+            <GridAuto>
+                {recommended_albums}
+            </GridAuto>
+            </Container>
         <NavbarFooter/>
     </>
 }

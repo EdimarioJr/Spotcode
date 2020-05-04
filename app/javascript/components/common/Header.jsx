@@ -9,7 +9,7 @@ import logo from '../../assets/images/logo.png'
 const Header= styled(FlexRowCenter)`
     justify-content: space-between;
     padding: 0 100px;
-    height: 150px;
+    height: 130px;
 
     #imagem{
         background-image: url(${logo});

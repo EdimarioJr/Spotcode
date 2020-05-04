@@ -35,7 +35,6 @@ export const FlexRowCenter = styled.div`
 export const FlexColumnCenter = styled.div`
     display:flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     min-height: calc(81vh - 80px);
 `;

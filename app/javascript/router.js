@@ -14,7 +14,7 @@ export default function Routes(){
             <Route exact path='/discovery' component={DiscoveryScreen}/>
             <Route exact path='/favorites' component={FavoriteScreen}/>
             <Route exact path='/search' component={SearchScreen}/>
-            <Route exact path='/album/:id' component={AlbumScreen}/>
+            <Route exact path='/albums/:id' component={AlbumScreen}/>
         </Switch>
     )        
 }
