@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaHome, FaSearch, FaHeart } from "react-icons/fa";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Navbar = styled.div`
   display: flex;
@@ -18,13 +18,13 @@ export default function NavbarFooter() {
     <>
       <Navbar>
         <Link to="/discovery">
-            <FaHome size="25px" color="white"/>
+          <FaHome size="25px" color="white" />
         </Link>
-        <Link to="/search">  
-            <FaSearch size="25px" color="white"/>
-         </Link>
+        <Link to="/search">
+          <FaSearch size="25px" color="white" />
+        </Link>
         <Link to="/favorites">
-            <FaHeart size="25px" color="white"/>
+          <FaHeart size="25px" color="white" />
         </Link>
       </Navbar>
     </>
