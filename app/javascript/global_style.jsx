@@ -63,7 +63,7 @@ export const Button = styled.button`
 `;
 
 export const Container = styled.div`
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     min-height: calc(81vh - 80px);
 `
@@ -73,4 +73,11 @@ export const GridAuto = styled.div`
     grid-template-columns: repeat(3,1fr);
     grid-gap: 20px;
     width: 100%;
+`
+export const Title = styled.h1`
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 45px;
+    font-weight: bolder;
 `

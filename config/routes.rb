@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   
   concern :favoritable do |options|
     shallow do
-      post '/favorite',{to: "favorite#create", on: :member}.merge(options)
-      delete '/favorite',{to: "favorite#delete", on: :member}.merge(options)
+      post "/favorite",{to: "favorites#create", on: :member}.merge(options)
+      delete "/favorite",{to: "favorites#delete", on: :member}.merge(options)
     end
   end
   
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
       resources :favorites, only: [:index,:create,:destroy]
 
       resources :songs, only: [] do
-        concerns :favoritable, favoritable_type: 'Song'
+        concerns :favoritable, favoritable_type: "Song"
       end
     end
   end

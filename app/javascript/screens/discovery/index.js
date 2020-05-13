@@ -34,9 +34,7 @@ export default function DiscoveryScreen() {
   const recommended_albums = recommended.map(function (album, key) {
     return <Album key={key} album={album} primary={true} />;
   });
-
-  console.log(recent_albums)
-  console.log(recommended_albums)
+ 
   return (
     <>
       <Container>

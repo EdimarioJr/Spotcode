@@ -56,7 +56,7 @@ export default function MusicDashboard(props) {
       audioRef.current.load();
       if (playing.id) {
         audioRef.current.play();
-        console.log(playing)
+        console.log(playing);
         RecentlyHeardService.create(playing.album_id);
       }
     }
@@ -67,6 +67,7 @@ export default function MusicDashboard(props) {
       <Button size primary onClick={() => SwitchRandom()}>
         {playRandom ? "Pausar" : "Tocar Aleatório"}
       </Button>
+
       <audio controls ref={audioRef} onEnded={() => NextSong()}>
         <source src={playing.file_url} type="audio/mp3" />
       </audio>

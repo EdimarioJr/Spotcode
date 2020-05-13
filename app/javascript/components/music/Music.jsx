@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import Favorite from "../common/Favorite";
 import { FaStopCircle, FaPlayCircle } from "react-icons/fa";
 
 const MusicGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 7fr;
+  grid-template-columns: 1fr 7fr 1fr;
   width: 100%;
   height: 60px;
   margin-bottom: 10px;
   cursor: pointer;
 
-  #music-icon {
+  .center {
     align-self: center;
   }
 `;
@@ -27,7 +28,7 @@ export default function Music(props) {
       size="35px"
       onClick={() => {
         props.clicou([]);
-        console.log(props)
+        console.log(props);
       }}
     />
   ) : (
@@ -36,7 +37,7 @@ export default function Music(props) {
       size="35px"
       onClick={() => {
         props.clicou(props.song);
-        console.log(props)
+        console.log(props);
       }}
     />
   );
@@ -44,11 +45,18 @@ export default function Music(props) {
   return (
     <>
       <MusicGrid>
-        <div id="music-icon">{music_icon}</div>
+        <div className="center">{music_icon}</div>
         <MusicInfo>
           <h3>{props.song.title}</h3>
           <h4>{props.song.artist_name}</h4>
         </MusicInfo>
+        <div className="center">
+          <Favorite
+            kind="songs"
+            id={props.song.id}
+            favored={props.song.favorite}
+          />
+        </div>
       </MusicGrid>
     </>
   );
